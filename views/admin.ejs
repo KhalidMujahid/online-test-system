@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <main class="h-screen bg-gray-100 p-8">
+        <form action="/add-question" method="POST" class="bg-white p-8 rounded shadow-md max-w-3xl mx-auto">
+          <h1 class="text-2xl font-bold mb-6"><i class="fas fa-cogs mr-2"></i>Admin Panel - Add Question</h1>
+      
+          <label class="block mb-2"><i class="fas fa-question-circle mr-2"></i>Question:</label>
+          <textarea name="questionText" class="border border-gray-300 rounded w-full p-2 mb-4" rows="3" required></textarea>
+      
+          <label class="block mb-2"><i class="fas fa-list-ul mr-2"></i>Options:</label>
+          <div class="mb-4">
+            <input type="text" name="options[]" placeholder="Option 1" class="border border-gray-300 rounded w-full p-2 mb-2" required>
+            <input type="text" name="options[]" placeholder="Option 2" class="border border-gray-300 rounded w-full p-2 mb-2" required>
+            <input type="text" name="options[]" placeholder="Option 3" class="border border-gray-300 rounded w-full p-2 mb-2" required>
+            <input type="text" name="options[]" placeholder="Option 4" class="border border-gray-300 rounded w-full p-2 mb-2" required>
+          </div>
+      
+          <label class="block mb-2"><i class="fas fa-check-circle mr-2"></i>Correct Answer:</label>
+          <input type="text" name="correctAnswer" class="border border-gray-300 rounded w-full p-2 mb-4" required>
+      
+          <button type="submit" class="bg-blue-500 text-white rounded p-2 w-full"><i class="fas fa-plus mr-2"></i>Add Question</button>
+        </form>
+      </main>
+      
+</body>
+</html>

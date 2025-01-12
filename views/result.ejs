@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <main class="h-screen flex items-center justify-center bg-gray-100">
+        <div class="bg-white p-8 rounded shadow-md text-center">
+          <h1 class="text-2xl font-bold mb-4"><i class="fas fa-trophy mr-2"></i>Your Score</h1>
+          <p class="text-4xl text-green-500 font-bold"><%= score %></p>
+          <div class="mt-4">
+            <p class="text-lg"><i class="fas fa-user mr-2"></i><strong>Name:</strong> <%= fullName %></p>
+            <p class="text-lg"><i class="fas fa-envelope mr-2"></i><strong>Email:</strong> <%= email %></p>
+            <p class="text-lg"><i class="fas fa-phone-alt mr-2"></i><strong>Phone:</strong> <%= phoneNumber %></p>
+          </div>
+          <button onclick="window.location.href='/'" class="mt-6 bg-blue-500 text-white rounded p-2 px-4"><i class="fas fa-redo mr-2"></i>Retake Test</button>
+        </div>
+      </main>
+      
+</body>
+</html>

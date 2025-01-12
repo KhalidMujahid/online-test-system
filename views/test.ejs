@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <main class="h-screen bg-gray-100 p-8">
+        <form action="/submit-test" method="POST" class="bg-white p-8 rounded shadow-md max-w-3xl mx-auto">
+          <h1 class="text-2xl font-bold mb-6">Answer the Questions</h1>
+      
+          <% questions.forEach((question, index) => { %>
+            <div class="mb-6">
+              <p class="font-semibold"><%= index + 1 %>. <%= question.questionText %></p>
+              <% question.options.forEach(option => { %>
+                <label class="block">
+                  <input type="radio" name="answers[<%= index %>]" value="<%= option %>" required> <%= option %>
+                </label>
+              <% }) %>
+            </div>
+          <% }) %>
+      
+          <input type="hidden" name="fullName" value="<%= fullName %>">
+          <input type="hidden" name="email" value="<%= email %>">
+          <input type="hidden" name="phoneNumber" value="<%= phoneNumber %>">
+      
+          <button type="submit" class="bg-green-500 text-white rounded p-2 w-full">Submit Test</button>
+        </form>
+      </main>
+      
+</body>
+</html>
